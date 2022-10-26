@@ -1,0 +1,51 @@
+.profile {
+  position: relative;
+
+  img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+
+  .userProfile {
+    opacity: 0;
+    z-index: -1;
+    transition: .5s;
+    width: 155px;
+    height: 200px;
+    background-color: #2E4765;
+    position: absolute;
+    right: 0;
+    padding: 30px 30px 20px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: right;
+    &:before {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      top: -15px;
+      right: 10px;
+      border-width: 0 15px 20px 15px;
+      border-color: transparent transparent #2E4765 transparent;
+    }
+    p {
+      font-size: 12px;
+      font-weight: 300;
+      color: #828BB2;
+      line-height: 24px;
+    }
+
+    h5 {
+      font-size: 12px;
+    }
+
+
+  }
+  &:hover .userProfile {
+    z-index: 10;
+    opacity: 1;
+  }
+}

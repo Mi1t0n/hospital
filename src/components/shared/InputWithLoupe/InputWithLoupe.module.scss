@@ -1,0 +1,21 @@
+.inputBlock {
+  background: #F5F7FD;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  button {
+    margin: 0 20px;
+    cursor: pointer;
+    width: 17px;
+    height: 17px;
+  }
+
+  input {
+    width: 400px;
+    height: 55px;
+    font-size: 17px;
+    outline: none;
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,11 @@
+.header{
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 30px;
+  margin-bottom: 20px;
+  height: 70px;
+}

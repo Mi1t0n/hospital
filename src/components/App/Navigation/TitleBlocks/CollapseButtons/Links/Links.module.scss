@@ -1,0 +1,28 @@
+.links {
+  list-style: none;
+  overflow: hidden;
+  //max-height: 0;
+  //visibility: hidden;
+  transition: max-height .4s ease, visibility .2s ease;
+
+
+  &.open {
+    max-height: 200px;
+    visibility: visible;
+  }
+
+  li {
+    a {
+      font-size: 13px;
+      color: #676B84;
+      font-weight: 400;
+      white-space: nowrap;
+      margin: 5px 0 5px 30px;
+      text-decoration: none;
+
+      &[aria-current=page] {
+        color: #16BBE5;
+      }
+    }
+  }
+}

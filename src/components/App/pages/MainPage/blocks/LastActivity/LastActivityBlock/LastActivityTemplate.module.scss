@@ -1,0 +1,38 @@
+
+.block {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 43px 30px;
+  display: grid;
+  grid-template-columns: 60px 80px;
+  grid-gap: 30px;
+  align-items: center;
+  justify-content: center;
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    text-align: right;
+  }
+
+  div {
+    text-align: left;
+
+    .count {
+      font-size: 45px;
+      font-weight: 600;
+      color: #2E4765;
+      font-family: "Rajdhani", sans-serif;
+      line-height: 1;
+    }
+
+    .header {
+      font-size: 19px;
+      font-weight: 500;
+      color: #B2B5C0;
+      font-family: "Rajdhani", sans-serif;
+      line-height: 1;
+    }
+  }
+
+}

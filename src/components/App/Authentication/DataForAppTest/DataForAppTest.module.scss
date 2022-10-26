@@ -1,0 +1,23 @@
+.usersForTest {
+  width: fit-content;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+
+  border: 1px solid black;
+  border-radius: 5px;
+
+  div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    padding: 5px 10px;
+    border: 1px black solid;
+    :first-child{
+      width: 265px;
+      border-right: 1px black solid;
+      padding-right: 20px;
+    }
+  }
+}
+

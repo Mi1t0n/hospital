@@ -1,0 +1,26 @@
+.notification{
+  margin-bottom: 14px;
+  position: relative;
+  .dot{
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color:rgb(91, 175, 165);
+    left: -33.5px;
+    top: 5px;
+  }
+  h3{
+    font-family: rajdhani,sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #2e4765;
+    line-height: 1.2;
+  }
+  p{
+    font-size: 14px;
+    line-height: 28px;
+    color: #818e94;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,23 @@
+.formType {
+  display: flex;
+  gap: 50px;
+  margin: 10px 0;
+
+  a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, .2);
+    transition: .3s;
+
+    &[aria-disabled=true] {
+      cursor: not-allowed;
+
+      &:active {
+        pointer-events: none;
+      }
+    }
+
+    &[aria-current=page] {
+      color: #2DAAB8;
+    }
+  }
+}
