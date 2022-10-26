@@ -4,7 +4,7 @@ with a different menu for users
 Redux Thunk & Query 
 TypeScript 
 there is a possibility to Signin or Signup 
-Change profile photo
+Change profile photo \n
 Charts for business data 
 
 
