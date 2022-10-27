@@ -1,3 +1,4 @@
+@use 'src/media/media' as *;
 .header{
   grid-column: 2/3;
   grid-row: 1/2;
@@ -8,4 +9,8 @@
   padding: 30px;
   margin-bottom: 20px;
   height: 70px;
+  @include mobile{
+    justify-content:center;
+    padding: 20px;
+  }
 }

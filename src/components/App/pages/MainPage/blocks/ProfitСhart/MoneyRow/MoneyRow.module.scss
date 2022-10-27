@@ -1,6 +1,16 @@
-.row{
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  margin-bottom: 30px;
+@use 'src/media/media' as *;
 
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 30px;
+  @include tablet{
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px;
+  }
+
+  @include mobile{
+    grid-template-columns:1fr;
+    grid-row-gap: 30px;
+  }
 }

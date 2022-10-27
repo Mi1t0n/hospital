@@ -1,5 +1,12 @@
-.block{
+@use 'src/media/media' as *;
+
+.block {
   background-color: #ffffff;
   padding: 30px;
   border-radius: 10px;
+  @include mobile {
+    > :last-child {
+      display: none;
+    }
+  }
 }

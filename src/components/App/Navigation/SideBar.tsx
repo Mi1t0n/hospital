@@ -5,8 +5,10 @@ import patientSideMenu from "./userSideMenu/patientSideMenu";
 import {useAppSelector} from "hooks/reduxHooks";
 import administratorSideMenu from "./userSideMenu/administratorSideMenu";
 import doctorSideMenu from "./userSideMenu/doctorSideMenu";
-import {IuserSideBar} from "../../../interfaces/IComponents/ISideBar";
+import {IuserSideBar} from "interfaces/IComponents/ISideBar";
 import {useGetCurrentUserQuery} from "redux/hospitalApi";
+import useMatchMedia from "hooks/useMatchMedia";
+
 
 const userSideBar: IuserSideBar = {
     Patient      : patientSideMenu,
@@ -15,11 +17,14 @@ const userSideBar: IuserSideBar = {
 }
 
 const SideBar = () => {
+    const {isTablet, isMobile} = useMatchMedia()
+
     const serialNumber = useAppSelector(state => state.user.serialNumber)
     const {data: currentUser} = useGetCurrentUserQuery(serialNumber)
     if (!currentUser) return null
 
     const targetedSideBar = userSideBar[currentUser[0].userType]
+
     return (
         <nav className={style.sideBar}>
             <Logo/>

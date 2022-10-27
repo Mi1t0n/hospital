@@ -1,6 +1,6 @@
 import style from './LastActivity.module.scss';
 import LastActivityBlock from './LastActivityBlock/LastActivityBlock';
-import {useEffect, useMemo} from "react";
+import {useEffect} from "react";
 import {useAppDispatch, useAppSelector} from "hooks/reduxHooks";
 import {getLastActivity} from "redux/slices/blocksData/lastActivitySlice/lastActivityThunk";
 import Loader from "components/shared/Loader/Loader";
@@ -21,9 +21,9 @@ const LastActivity = () => {
     const blocks = blocksValue?.map(blockValue => <LastActivityBlock {...blockValue} key={blockValue.title}/>)
 
     return (
-            <div className={style.block}>
-                {blocks}
-            </div>
+        <div className={style.block}>
+            {blocks}
+        </div>
     )
 };
 

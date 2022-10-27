@@ -1,4 +1,4 @@
-
+@use 'src/media/media' as *;
   .row {
     background: #2daab8;
     :first-child {
@@ -19,5 +19,17 @@
       white-space: nowrap;
       text-transform: capitalize;
       font-family: rajdhani, sans-serif;
+    }
+    @include tablet{
+      > :nth-child(4){
+        display: none;
+      }
+    }
+    @include mobile{
+      > :nth-child(4),
+      > :nth-child(2),
+      > :nth-child(5){
+        display: none;
+      }
     }
   }

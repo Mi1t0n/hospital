@@ -1,16 +1,20 @@
 import style from './DoctorMainPage.module.scss';
-import Notifications from "../../blocks/Notifications/Notifications";
-import RecentActivity from "../../blocks/RecentActivity/RecentActivity";
-import PatientsTable from "../../blocks/PatientsTable/PatientsTable";
-import ReportСhart from "../../blocks/ReportСhart/ReportСhart";
+import {lazy, Suspense} from 'react'
 
+
+const Notifications = lazy(() => import("../../blocks/Notifications/Notifications"))
+const RecentActivity = lazy(() => import("../../blocks/RecentActivity/RecentActivity"))
+const PatientsTable = lazy(() => import("../../blocks/PatientsTable/PatientsTable"))
+const ReportСhart = lazy(() => import("../../blocks/ReportСhart/ReportСhart"))
 
 const DoctorMainPage = () =>
     (<div className={style.mainPage}>
-        <PatientsTable/>
-        <ReportСhart/>
-        <Notifications/>
-        <RecentActivity/>
+        <Suspense fallback={<div>Loading . . .</div>}>
+            <PatientsTable/>
+            <ReportСhart/>
+            <Notifications/>
+            <RecentActivity/>
+        </Suspense>
     </div>)
 
 export default DoctorMainPage;

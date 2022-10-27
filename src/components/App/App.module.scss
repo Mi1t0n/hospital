@@ -1,4 +1,4 @@
-@use '../../media/media';
+@use '../../media/media' as *;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500&display=swap');
 
@@ -10,12 +10,21 @@
   font-family: 'Poppins', sans-serif;
 
 }
+
 body {
   background: #EFF1F7;
 }
 
 .app {
   display: grid;
-  grid-template-columns: 270px minmax(120px, 1fr);
+  grid-template-columns: 270px 1fr;
   grid-template-rows: 130px 1fr;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+
 }
