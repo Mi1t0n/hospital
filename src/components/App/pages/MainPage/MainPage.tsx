@@ -3,7 +3,7 @@ import PatientMainPage from "./userMainPage/PatientMainPage/PatientMainPage";
 import DoctorMainPage from "./userMainPage/DoctorMainPage/DoctorMainPage";
 import AdministratorMainMenu from "./userMainPage/AdministratorMainMenu/AdministratorMainMenu";
 import {IuserMainPage} from "interfaces/IComponents/IMainPage";
-import {useGetCurrentUserQuery} from "../../../../redux/hospitalApi";
+import {useGetCurrentUserQuery} from "redux/hospitalApi";
 
 const userMainPage: IuserMainPage = {
     Patient      : PatientMainPage,

@@ -8,6 +8,8 @@ import doctorSideMenu from "./userSideMenu/doctorSideMenu";
 import {IuserSideBar} from "interfaces/IComponents/ISideBar";
 import {useGetCurrentUserQuery} from "redux/hospitalApi";
 import useMatchMedia from "hooks/useMatchMedia";
+import arrow from "assets/arrow.svg";
+import {useState} from "react";
 
 
 const userSideBar: IuserSideBar = {
@@ -18,6 +20,7 @@ const userSideBar: IuserSideBar = {
 
 const SideBar = () => {
     const {isTablet, isMobile} = useMatchMedia()
+    const [status, setStatus] = useState<boolean>(false)
 
     const serialNumber = useAppSelector(state => state.user.serialNumber)
     const {data: currentUser} = useGetCurrentUserQuery(serialNumber)
@@ -26,7 +29,15 @@ const SideBar = () => {
     const targetedSideBar = userSideBar[currentUser[0].userType]
 
     return (
-        <nav className={style.sideBar}>
+        <nav className={style.sideBar} data-status={status}>
+            {
+                (isTablet || isMobile) &&
+                <img src={arrow} alt="arrow"
+                     className={style.toggleArrow}
+                     onClick={() => setStatus(!status)}
+
+                />
+            }
             <Logo/>
             <MenuBlock data={targetedSideBar}/>
         </nav>

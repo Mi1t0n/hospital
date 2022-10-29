@@ -19,7 +19,7 @@ const RecentActivity = () => {
     if (error) return <div>{error}</div>
     if (!blocksValue) return <div>Cant load</div>
 
-    const blocks = blocksValue.map(blockValue => <RecentActivityBlock {...blockValue} key={blockValue.title}/>)
+    const blocks = blocksValue.map((blockValue,index) => <RecentActivityBlock {...blockValue} key={index}/>)
 
     return (
         <div className={style.block}>

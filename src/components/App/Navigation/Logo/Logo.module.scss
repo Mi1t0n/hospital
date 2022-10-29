@@ -1,3 +1,5 @@
+@use 'src/media/media' as * ;
+
 .logo {
   box-sizing: border-box;
   padding: 30px;
@@ -6,12 +8,18 @@
   gap: 10px;
   align-items: center;
   color: #676B84;
-}
 
-.logo img {
-  width: 42px;
-}
+  img {
+    width: 42px;
+  }
 
-.logo p {
-  font-size: 24px;
+  p {
+    font-size: 24px;
+  }
+
+  @include media(tablet, mobile) {
+    padding: 5px 30px;
+    margin: 5px 30px;
+    justify-content: center;
+  }
 }

@@ -1,13 +1,22 @@
+@use 'src/media/media' as * ;
 
 .blocks {
   list-style: none;
   padding-left: 30px;
-
+  height: 90%;
+  overflow-y: auto;
+  overflow-x: hidden;
   .title {
     padding: 15px 25px 5px 0;
     font-size: 20px;
     font-weight: 700;
     color: #2DAAB8;
     font-family: "Rajdhani", sans-serif;
+  }
+  @include media(pc,laptop){
+    height: 80%;
+  }
+  @include media(mobile,tablet){
+    height: 90%
   }
 }

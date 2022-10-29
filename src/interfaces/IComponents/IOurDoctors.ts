@@ -1,5 +1,5 @@
-import {IDoctor} from "./IDoctor";
+import {IShowUserProfile} from "./IShowUserProfile";
 
-type IOurDoctors = IDoctor[]
+type IOurDoctors = IShowUserProfile[]
 
 export type {IOurDoctors}

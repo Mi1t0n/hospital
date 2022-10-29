@@ -4,10 +4,10 @@ import {Lazy, Navigation} from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import {useGetDoctorsQuery} from "redux/hospitalApi";
-import Doctor from "./Doctor/Doctor";
 import BlockTitle from "components/shared/BlockTitle/BlockTitle";
 import Loader from "components/shared/Loader/Loader";
 import useMatchMedia from "hooks/useMatchMedia";
+import ShowUserProfile from "components/shared/ShowUserProfile/ShowUserProfile";
 
 const OurDoctors = () => {
     const {data: doctors, isError, isLoading} = useGetDoctorsQuery('')
@@ -25,7 +25,7 @@ const OurDoctors = () => {
 
     const doctorsLine = doctors.map(doctor => (
         <SwiperSlide key={doctor.serialNumber}>
-            <Doctor {...doctor}/>
+            <ShowUserProfile {...doctor}/>
         </SwiperSlide>
     ))
 

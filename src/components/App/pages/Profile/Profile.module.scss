@@ -1,9 +1,14 @@
+@use 'src/media/media' as * ;
+
 .profile {
-  min-width: 690px;
   display: flex;
   justify-content: flex-start;
   gap: 20px;
   background: white;
   border-radius: 10px;
   padding: 30px;
+
+  @include media(tablet,mobile){
+    flex-direction: column;
+  }
 }

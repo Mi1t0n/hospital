@@ -1,4 +1,4 @@
-import {Navigate, Route, Routes} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import pagesPaths from "interfaces/enums/pagesPaths";
 import {lazy, Suspense} from 'react'
 
@@ -10,7 +10,6 @@ const PatientRoutes = () =>
         <Routes>
             <Route element={<Profile/>} path={pagesPaths.Profile}/>
             <Route element={<MainPage/>} path={pagesPaths.MainPage}/>
-            <Route element={<Navigate to={pagesPaths.MainPage}/>} path={'/*'}/>
         </Routes>
     </Suspense>)
 

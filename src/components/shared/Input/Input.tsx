@@ -1,4 +1,4 @@
-import style from './InputWithLoupe.module.scss';
+import style from './Input.module.scss';
 import loupe from 'assets/loupe.svg';
 import {ChangeEvent, FC, useState} from 'react';
 import {IInput} from "interfaces/IComponents/IInput";

@@ -14,13 +14,18 @@
   }
 
   input {
-    width: 400px;
+    width: 120px;
     height: 55px;
     font-size: 17px;
     outline: none;
     padding: 0 10px;
-    @include tablet{
-      width: 150px;
+    transition: width .5s;
+    &:focus{
+      width: 600px;
+      @include tablet{
+        width: 300px;
+      }
+
     }
   }
   @include mobile{

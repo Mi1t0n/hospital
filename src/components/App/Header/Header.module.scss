@@ -9,8 +9,11 @@
   padding: 30px;
   margin-bottom: 20px;
   height: 70px;
+  @include media(mobile,tablet){
+    padding: 20px;
+    grid-column: 1/2;
+  }
   @include mobile{
     justify-content:center;
-    padding: 20px;
   }
 }

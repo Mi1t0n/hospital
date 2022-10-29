@@ -32,3 +32,28 @@ $breakpoint_pc: 1550px;
     @content
   }
 }
+
+@mixin media($keys...) {
+  @each $key in $keys {
+    @if ($key == mobile) {
+      @include mobile {
+        @content
+      }
+    }
+    @if ($key == tablet) {
+      @include tablet {
+        @content
+      }
+    }
+    @if ($key == laptop) {
+      @include laptop {
+        @content
+      }
+    }
+    @if ($key == pc) {
+      @include pc {
+        @content
+      }
+    }
+  }
+}

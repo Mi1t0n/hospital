@@ -1,0 +1,25 @@
+@use 'src/media/media' as *;
+
+.users {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+
+  .loader {
+    grid-column: 1/4;
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    .loader {
+      grid-column: 1/3;
+    }
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+    .loader {
+      grid-column: 1/2;
+    }
+  }
+
+}

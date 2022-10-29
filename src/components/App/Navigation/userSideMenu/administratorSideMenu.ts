@@ -7,12 +7,12 @@ import doctorSideMenu from "./doctorSideMenu";
 const administratorSideMenu = [
     ...doctorSideMenu,
     {
-        title    : 'Lorem',
+        title    : 'Admin Data',
         subBlocks: [
             {
-                title    : 'Lorem', logo: profileLogo, id: faker.random.numeric(6),
+                title    : 'Users', logo: profileLogo, id: faker.random.numeric(6),
                 subBlocks: [
-                    {title: 'Lorem', routePath: '/0'},
+                    {title: 'All our users', routePath: '/allUsers'},
                     {title: 'Lorem', routePath: '/0'},
                     {title: 'Lorem', routePath: '/0'},
                 ]

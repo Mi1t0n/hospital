@@ -16,6 +16,10 @@ const hospitalApi = createApi({
         getProfile    : build.query<IProfile[], string>({
             query: (serialNumber) => `/users?serialNumber=${serialNumber}`,
         }),
+        getUsers      : build.query<IProfile[], { page: number, limit: number }>({
+            query       : ({page, limit}) => `/users?page=${page}&limit=${limit}`,
+            providesTags: _ => ['User']
+        }),
         getCurrentUser: build.query<IProfile[], string | null>({
             query       : (serialNumber) => `/users?serialNumber=${serialNumber}`,
             providesTags: _ => ['User']
@@ -38,5 +42,5 @@ const hospitalApi = createApi({
 export default hospitalApi
 export const {
     useGetDoctorsQuery, useGetProfileQuery, useGetMyPatientsQuery, useSetFieldValueMutation,
-    useGetCurrentUserQuery,
+    useGetCurrentUserQuery, useGetUsersQuery
 } = hospitalApi

@@ -1,3 +1,5 @@
+@use 'src/media/media' as * ;
+
 .ownerCover {
   padding: 30px;
   display: flex;
@@ -17,4 +19,16 @@
     font-family: rajdhani, sans-serif;
     padding: 5px;
   }
+
+  @include mobile {
+    padding: 15px;
+    img {
+      width: 130px;
+      height: 130px;
+    }
+    h3 {
+      font-size: 18px;
+    }
+  }
+
 }
