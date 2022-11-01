@@ -2,7 +2,7 @@ import style from './UserInfo.module.scss';
 import {useAppSelector} from 'hooks/reduxHooks';
 import ProfileNav from './ProfileNav/ProfileNav';
 import defaultAvatar from 'assets/defaultAvatar.svg';
-import {useGetCurrentUserQuery} from "../../../../../redux/hospitalApi";
+import {useGetCurrentUserQuery} from "redux/hospitalApi";
 
 const UserInfo = () => {
     const serialNumber = useAppSelector(state => state.user.serialNumber)

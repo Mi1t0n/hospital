@@ -22,7 +22,7 @@ const SignUp = () => {
             <Input name={'password'} type={'password'}
                    disabled={loading} options={{required: true}}
             />
-            <Input name={'lastName'} type={'text'}
+            <Input name={'firstName'} type={'text'}
                    disabled={loading} options={{required: true}}
             />
             <Input name={'lastName'} type={'text'}
