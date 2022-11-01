@@ -1,0 +1,35 @@
+@use 'src/media/media' as *;
+
+.headerInput {
+  display: flex;
+  gap: 20px;
+
+  @include mobile {
+    display: none;
+  }
+
+  button {
+    img {
+      cursor: pointer;
+    }
+  }
+
+  input {
+    outline: none;
+    font-size: 17px;
+    height: 35px;
+    width: 80px;
+    padding: 5px 15px;
+    border: .1px solid gray;
+    background: #f5f7fd;
+    border-radius: 20px;
+    transition: width .8s;
+
+    &:focus {
+      width: 700px;
+      @include tablet {
+        width: 400px;
+      }
+    }
+  }
+}

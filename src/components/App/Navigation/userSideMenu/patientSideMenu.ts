@@ -3,7 +3,7 @@ import {faker} from "@faker-js/faker";
 
 const patientSideMenu = [
     {
-        title    : 'Pages',
+        title    : 'Patient Menu',
         subBlocks: [
             {
                 title    : 'Pages', logo: profileLogo, id: faker.random.numeric(6),

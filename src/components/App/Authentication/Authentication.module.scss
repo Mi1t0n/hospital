@@ -1,3 +1,5 @@
+@use 'src/media/media' as *;
+
 .authForm {
   form {
 
@@ -6,10 +8,14 @@
     justify-content: center;
     align-items: center;
     border: solid 1px black;
-    width: 600px;
+    width: 500px;
+
     margin: 200px auto;
     gap: 30px;
-    border-radius: 5px;
+    border-radius: 10px;
+    @include media(mobile, tablet) {
+      width: 300px;
+    }
 
     div {
       input {
@@ -19,6 +25,9 @@
         width: 400px;
         outline: none;
         display: block;
+        @include media(mobile, tablet) {
+          width: 200px;
+        }
 
         &:disabled {
           cursor: not-allowed;
@@ -33,34 +42,6 @@
           color: red;
           font-weight: bold;
         }
-      }
-    }
-
-    input[type=submit] {
-      border-radius: 5px;
-      border: 1px black solid;
-      padding: 5px;
-      width: 300px;
-      margin-bottom: 25px;
-      transition: background-color .3s;
-      cursor: pointer;
-
-      &:hover {
-        color: white;
-        background-color: black;
-      }
-
-      &:active {
-        color: white;
-        background-color: black;
-        opacity: .5;
-      }
-
-      &:disabled {
-        background-color: gray;
-        color: white;
-        cursor: not-allowed;
-        opacity: 1;
       }
     }
   }

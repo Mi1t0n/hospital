@@ -10,7 +10,7 @@ import useMatchMedia from "hooks/useMatchMedia";
 import ShowUserProfile from "components/shared/ShowUserProfile/ShowUserProfile";
 
 const OurDoctors = () => {
-    const {data: doctors, isError, isLoading} = useGetDoctorsQuery('')
+    const {data: doctors, isError, isLoading} = useGetDoctorsQuery()
     const {isPC, isTablet, isMobile, isLaptop} = useMatchMedia()
     const usersPerView = () => {
         if (isPC) return 4

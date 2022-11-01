@@ -2,12 +2,12 @@ import profileLogo from 'assets/userMenu/profile.svg';
 import infoLogo from 'assets/userMenu/info.svg';
 import paintLogo from 'assets/userMenu/paint.svg';
 import {faker} from "@faker-js/faker";
-import doctorSideMenu from "./doctorSideMenu";
+import patientSideMenu from "./patientSideMenu";
 
 const administratorSideMenu = [
-    ...doctorSideMenu,
+    ...patientSideMenu,
     {
-        title    : 'Admin Data',
+        title    : 'Admin Menu',
         subBlocks: [
             {
                 title    : 'Users', logo: profileLogo, id: faker.random.numeric(6),
@@ -18,9 +18,9 @@ const administratorSideMenu = [
                 ]
             },
             {
-                title    : 'Lorem', logo: infoLogo, id: faker.random.numeric(6),
+                title    : 'Doctors', logo: infoLogo, id: faker.random.numeric(6),
                 subBlocks: [
-                    {title: 'Lorem', routePath: '/0'},
+                    {title: 'Reports', routePath: '/reports'},
                     {title: 'Lorem', routePath: '/0'},
                 ]
             },

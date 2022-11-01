@@ -1,4 +1,4 @@
-import style from './ChangePhotoButton.module.scss';
+ import style from './ChangePhotoButton.module.scss';
 import {ChangeEvent, useRef} from "react";
 import useUploadImage from "hooks/useUploadImage";
 

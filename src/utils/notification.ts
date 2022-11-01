@@ -9,7 +9,7 @@ const notification = {
     success(message: string) {
         toast.success(message, {id: this.toastID})
     },
-    error(error:string) {
+    error(error:string|undefined) {
         toast.error(`Something went wrong :[ \n Error: ${error}`, {id: this.toastID})
     }
 }

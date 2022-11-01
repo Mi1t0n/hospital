@@ -19,7 +19,8 @@ export const store = configureStore({
         lastActivity       : lastActivityReducer,
         [hospitalApi.reducerPath]:hospitalApi.reducer
     },
-    middleware:(getDefaultMiddleware)=>getDefaultMiddleware().concat(hospitalApi.middleware)
+    middleware:(getDefaultMiddleware)=>
+        getDefaultMiddleware().concat(hospitalApi.middleware)
 });
 
 

@@ -7,12 +7,12 @@ import patientSideMenu from "./patientSideMenu";
 const doctorSideMenu = [
     ...patientSideMenu,
     {
-        title    : 'Lorem',
+        title    : 'Doctor Menu',
         subBlocks: [
             {
-                title    : 'Lorem', logo: profileLogo, id: faker.random.numeric(6),
+                title    : 'Admissions', logo: profileLogo, id: faker.random.numeric(6),
                 subBlocks: [
-                    {title: 'Lorem', routePath: '/0'},
+                    {title: 'Create report', routePath: '/admissionReport'},
                     {title: 'Lorem', routePath: '/0'},
                     {title: 'Lorem', routePath: '/0'},
                 ]

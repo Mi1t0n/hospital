@@ -1,0 +1,44 @@
+@use 'src/media/media' as * ;
+.admissionReport{
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+
+  justify-content: center;
+  .form{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include tablet {
+      width: 400px;
+    }
+    @include mobile{
+      width: 200px;
+    }
+    div{
+      label {
+        color: #999;
+        font-size: 18px;
+
+        span {
+          color: red;
+          font-weight: bold;
+        }
+      }
+      input,select,textarea{
+        width: 100%;
+        outline: none;
+        border: 1px solid black;
+      }
+      textarea{
+        resize: none;
+        height: 200px;
+      }
+    }
+    button{
+      align-self: center;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@use 'src/media/media' as *;
+
+.reportData {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  cursor: pointer;
+}
+
+.section {
+  display: grid;
+  word-break: break-word;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  @include mobile{
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

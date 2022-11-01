@@ -1,5 +1,6 @@
 @use 'src/media/media' as *;
-.header{
+
+.header {
   grid-column: 2/3;
   grid-row: 1/2;
   display: flex;
@@ -9,11 +10,12 @@
   padding: 30px;
   margin-bottom: 20px;
   height: 70px;
-  @include media(mobile,tablet){
+
+  @include media(mobile, tablet) {
     padding: 20px;
     grid-column: 1/2;
   }
-  @include mobile{
-    justify-content:center;
+  @include mobile {
+    justify-content: center;
   }
 }

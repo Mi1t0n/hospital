@@ -4,7 +4,7 @@ import {useGetCurrentUserQuery, useGetProfileQuery} from "redux/hospitalApi";
 import OwnerCover from "./OwnerCover/OwnerCover";
 import OwnerInfo from "./ProfileInfo/OwnerInfo";
 import {useAppSelector} from "hooks/reduxHooks";
-import Loader from "../../../shared/Loader/Loader";
+import Loader from "components/shared/Loader/Loader";
 
 
 const Profile = () => {

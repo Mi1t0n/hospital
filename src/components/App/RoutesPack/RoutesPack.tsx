@@ -15,7 +15,7 @@ const userRoutes: IuserRoutes = {
 const RoutesPack = () => {
     const serialNumber = useAppSelector(state => state.user.serialNumber)
     const {data: currentUser} = useGetCurrentUserQuery(serialNumber)
-    if (!currentUser) return null
+    if (!currentUser) return <div>Cant load</div>
     const TargetedRoutes = userRoutes[currentUser[0].userType]
 
     return (

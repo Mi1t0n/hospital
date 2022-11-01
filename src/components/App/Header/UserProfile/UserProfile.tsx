@@ -5,10 +5,9 @@ import bell from 'assets/bell.svg'
 import message from 'assets/message.svg'
 
 const UserProfile = () =>
-    (<div className={style.profile}>
-        <NotificationButton icon={bell} routePath={'/notifications'}/>
+    <div className={style.profile}>
         <NotificationButton icon={message} routePath={'/messages'}/>
         <UserInfo/>
-    </div>)
+    </div>
 
 export default UserProfile;

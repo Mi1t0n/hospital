@@ -1,12 +1,12 @@
 import style from './Header.module.scss';
-import Input from 'components/shared/Input/Input';
 import UserProfile from './UserProfile/UserProfile';
+import HeaderInput from "./HeaderInput/HeaderInput";
 
 const Header = () =>
-    (<header className={style.header}>
-        <Input valueOnClick={() => {}}/>
+    <header className={style.header}>
+        <HeaderInput/>
         <UserProfile/>
-    </header>);
+    </header>
 
 
 export default Header;
