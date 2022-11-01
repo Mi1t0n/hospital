@@ -1,12 +1,13 @@
-# hospital
-Hospital app  
-with a different menu for users
-Redux Thunk & Query 
-TypeScript 
-FakerJS
-there is a possibility to Signin or Signup 
-Change profile photo 
-Charts for business data
-Responsive design
+# https://hospital-11b62.firebaseapp.com/mainPage
 
-Will be more ... 
+The patient has only the main page , and profile 
+the doctor has information about the upcoming visits, and he can also send an appointment report.
+the administrator has information about the hospital's money and about past appointments
+
+RTK & Query 
+TypeScript
+FireBase
+RestAPI(mockApi)
+Responsive design for tablet , mobile, pc+ 
+FakerJS
+Recharts 
